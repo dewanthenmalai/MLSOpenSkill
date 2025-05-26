@@ -28,7 +28,7 @@ for i in range(1, max(played_matches.get_column("Round Number"))+1):
         teams[match["Away Team"]] = away
 
 league = [[t] for t in teams.values()]
-rank_predictions = model.predict_rank(league)
+rank_predicitions = model.predict_rank(league)
 
 for name, rank in zip(teamNames, rank_predictions):
     print(f"Team: {name}, Rank: {rank[0]}, Probability: {rank[1]}")
